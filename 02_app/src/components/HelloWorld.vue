@@ -18,13 +18,11 @@ export default {
   },
   created() {
     console.log('Created')
-    console.log(this)
-    console.log(this.props)
+    console.log('props msg', this.msg)
   },
   mounted() {
     console.log('Mounted')
-    console.log(this)
-    console.log(this.props)
+    console.log('props msg', this.msg)
   },
   props: {
     msg: String

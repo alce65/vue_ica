@@ -1,8 +1,11 @@
 <template>
     <div>
         <!-- Binding en dos direcciones -->
-        <p>Hola {{usuario}}, soy {{myName}}</p>
+        <!-- <p>Hola <span v-html="usuario"></span>, soy {{myName}}</p> -->
+        <p>Hola <span>{{usuario}}</span>, soy {{myName}}</p>
         <input type="text" :placeholder="inputMsg" v-model="usuario">
+        <button id="b" type="button" @click.prevent="onBorrar($event, 'b')">Borrar</button>
+        <button id="bl" type="button" @click="onBorrar($event, 'bl')">Borrar lento</button>
     </div>
 </template>
 
@@ -17,7 +20,20 @@ export default {
     },
     props: {
         myName: String
-    }
+    },
+    methods: {
+        onBorrar: function (ev, id) {
+            console.log('Borando', ev, id)
+            if (id === 'b') {
+                this.borrar()
+            } else {
+                setTimeout(this.borrar, 1000)
+            }
+        },
+        borrar : function () {
+            this.usuario = ''
+        }
+    },
 }
 </script>
 

@@ -26,7 +26,10 @@ function main () {
                },
                props: {
                    nombre: String
-               }
+               },
+               created() {
+                   console.log('Creado')
+               },
            } 
        }
    }
