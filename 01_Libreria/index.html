@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria VUE</title>
+
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>
+                {{titulo}}
+            </h1>
+        </header>   
+        <main>
+            <!-- Binding en una direccion
+                <input type="text" v-bind:value="usuario" v-bind:placeholder="inputMsg"> 
+            -->
+            <!-- Binding en dos direcciones -->
+            <p>Hola {{usuario}}</p>
+            <input type="text" :placeholder="inputMsg" v-model="usuario">
+        </main>
+        
+        <footer>
+            <ico-pie id="pie1" title="Esto es VUE" nombre="Alejandro"></ico-pie>  
+            <ico-pie id="pie2" title="Esto es VUE" nombre="Ernesto"></ico-pie>  
+        </footer>  
+    </div>
+     <script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="./js/app.js"></script>   
+</body>
+</html>
