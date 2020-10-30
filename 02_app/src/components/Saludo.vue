@@ -2,7 +2,7 @@
     <div>
         <!-- Binding en dos direcciones -->
         <!-- <p>Hola <span v-html="usuario"></span>, soy {{myName}}</p> -->
-        <p>Hola <span>{{usuario}}</span>, soy {{myName}}</p>
+        <p class="resaltado">Hola <span>{{usuario}}</span>, soy {{myName}}</p>
         <input type="text" :placeholder="inputMsg" v-model="usuario">
         <button id="b" type="button" @click.prevent="onBorrar($event, 'b')">Borrar</button>
         <button id="bl" type="button" @click="onBorrar($event, 'bl')">Borrar lento</button>
@@ -39,7 +39,9 @@ export default {
 
 <style scoped>
     p {
-        font-size: 1.5rem;
+        font-size: 1.5rem;  
+    }
+    .resaltado {
         color: brown;
     }
 </style>

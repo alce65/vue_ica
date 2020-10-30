@@ -4,6 +4,8 @@
     <HelloWorld msg="Saludos, curso de Vue.js App"/>
     <Lista></Lista>
     <Tareas></Tareas>
+    <Codex></Codex>
+    <Letras></Letras>
   </div>
 </template>
 
@@ -11,13 +13,17 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Lista from './components/Lista.vue'
 import Tareas from './components/Tareas.vue'
+import Codex from './components/Codificador.vue'
+import Letras from './components/Letras.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     Lista,
-    Tareas
+    Tareas,
+    Codex,
+    Letras
   }
 }
 </script>

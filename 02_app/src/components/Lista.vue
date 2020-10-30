@@ -3,13 +3,16 @@
         <h2>Lista</h2>
         <input type="text" placeholder="Items" v-model="item">
         <button type="button" @click="onGuardar()">Guardar</button>
-        <div v-if="aDatos.length">
+        <div v-show="aDatos.length">
             <h3>Items</h3>
             <ul>
                 <li v-for="(item, i) in aDatos" :key="i">
                     {{item}} <span @click="onBorrar(i)">🗑</span>
                 </li>
             </ul>
+        </div>
+        <div v-show="!aDatos.length">
+            <p>Añade algo a la lista</p>
         </div>
     </div>
 </template>
